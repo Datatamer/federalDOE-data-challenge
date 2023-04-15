@@ -38,10 +38,10 @@ There are a sequence of steps that we would like you to complete. We hope this w
 1. Fork the git repo to your own Github account.
 2. Devise a database schema to hold the data in the people and places CSV files, and apply it to the MySQL database. Apply this schema via a script, either in SQL or another language of your choice.
 3. Create a Docker image for loading the CSV files, places.csv and people.csv, into the tables you have created in the database. Make sure the appropriate config is in the docker compose file. Your data ingest process should be implemented in a script, in any language you like, as long as it runs within a Docker container.
-4. Create a Docker image for outputting a summary of content in the database (or add to the one from Step 3). You may do the data processing using any programming language you like. 
+4. Create a Docker image for outputting a summary of content in the database (or add to the one from Step 3). You may do the data processing using any programming language you like.
     - The output must be in JSON format, and be written to a file in the data folder called **data/summary_output.json**. It should consist of a list of the countries, and a count of how many people were born in that country. We have supplied a sample output **data/sample_output.json** to compare your file against.
     - If you have time, generate an additional JSON file which shows the most common month of birth for each county in N. Ireland represented in the datasets.
-5. Share a link to your cloned github repo with us so we can review your code ahead of your interview. In summary, it should include: 
+5. Share a link to your cloned github repo with us so we can review your code ahead of your interview. In summary, it should include:
      - the database schema generation script from Step 2
      - Docker configuration data for the docker image(s) from Step 3-4
      - the data ingestion script from Step 3
@@ -67,12 +67,12 @@ Details of how to run and connect to the database are below, together with how t
 
 1. Install Docker
 
-    Make sure you have a recent version of Docker. 
+    Make sure you have a recent version of Docker.
 
     Follow directions here: https://docs.docker.com/get-docker/.
 2. Build the images included in this git repo
-    
-    This will build all of the images referenced in the Docker Compose file. You will need to re-run this after making code changes. (You can also specify individual services to build if that is more convenient.) To build, run 
+
+    This will build all of the images referenced in the Docker Compose file. You will need to re-run this after making code changes. (You can also specify individual services to build if that is more convenient.) To build, run
     ```
     docker compose build
     ```
@@ -90,7 +90,7 @@ Details of how to run and connect to the database are below, together with how t
     ```
 
 4. Running example scripts
-    
+
     We have provided example code written in C, Node, Python, and R. These show how to use a programme in a separate Docker container to connect to the database, using an ORM library where appropriate, to load data from a CSV file, and to query data to output as a JSON file. There should be regarded as illustrative; it is fine to use any of these examples as the basis of your own solution, but we would prefer that you use technologies that you feel comfortable with.
 
     a. Make sure the MySQL database is running, and then load the example schema with:
